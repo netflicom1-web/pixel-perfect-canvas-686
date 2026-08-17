@@ -236,15 +236,11 @@ function Index() {
       </section>
 
       {/* Organização */}
-      <section className="mx-auto max-w-6xl px-5 py-14">
-        <div className="grid items-center gap-10 md:grid-cols-2">
-          <img
-            src={mockupFolders.url}
-            alt="Pastas de moldes separadas por categoria masculino, feminino, infantil, pet e bônus"
-            loading="lazy"
-            className="w-full"
-            style={{ filter: "drop-shadow(var(--shadow-soft))" }}
-          />
+      <section className="mx-auto max-w-3xl px-5 py-14">
+        <div
+          className="rounded-3xl border border-border bg-card p-8"
+          style={{ boxShadow: "var(--shadow-soft)" }}
+        >
           <div>
             <h2 className="text-3xl md:text-4xl">
               Tudo separado por categoria, sem confusão
@@ -273,6 +269,12 @@ function Index() {
           className="mx-auto max-w-3xl rounded-3xl p-8 text-center text-primary-foreground md:p-12"
           style={{ background: "var(--gradient-primary)", boxShadow: "var(--shadow-lift)" }}
         >
+          <img
+            src={mockupOferta.url}
+            alt="Tudo que está incluso no pack: moldes em PDF, curso de costura e guia de dicas no notebook e tablet"
+            loading="lazy"
+            className="mx-auto mb-8 w-full max-w-xl rounded-2xl"
+          />
           <h2 className="text-3xl md:text-4xl">Leve o pack completo hoje</h2>
           <p className="mt-3 opacity-90">
             Moldes bebê + pet + curso de costura + guia de dicas. Valor separado de
@@ -299,6 +301,22 @@ function Index() {
       <section className="mx-auto max-w-6xl px-5 py-10">
         <h2 className="text-center text-3xl md:text-4xl">Quem já está costurando</h2>
         <div className="mt-10 grid gap-5 md:grid-cols-3">
+          {prints.map((p) => (
+            <figure
+              key={p.alt}
+              className="overflow-hidden rounded-2xl border border-border bg-card p-3"
+              style={{ boxShadow: "var(--shadow-soft)" }}
+            >
+              <img
+                src={p.img.url}
+                alt={p.alt}
+                loading="lazy"
+                className="w-full rounded-xl"
+              />
+            </figure>
+          ))}
+        </div>
+        <div className="mt-6 grid gap-5 md:grid-cols-3">
           {depoimentos.map((d) => (
             <blockquote
               key={d.nome}
@@ -311,8 +329,14 @@ function Index() {
                 ))}
               </div>
               <p className="mt-4 text-sm text-muted-foreground">“{d.texto}”</p>
-              <footer className="mt-4 text-sm font-bold text-foreground">
-                {d.nome}
+              <footer className="mt-4 flex items-center gap-3">
+                <img
+                  src={d.foto.url}
+                  alt={`Foto de ${d.nome}`}
+                  loading="lazy"
+                  className="h-11 w-11 rounded-full object-cover"
+                />
+                <span className="text-sm font-bold text-foreground">{d.nome}</span>
               </footer>
             </blockquote>
           ))}
