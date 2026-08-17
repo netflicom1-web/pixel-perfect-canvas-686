@@ -92,19 +92,37 @@ const itens = [
   },
 ];
 
+const prints = [
+  {
+    img: printSueli,
+    alt: "Depoimento de Sueli Gerra mostrando um pijama infantil feito com os moldes",
+  },
+  {
+    img: printSilvia,
+    alt: "Depoimento de Silvia Matos elogiando a compra dos moldes",
+  },
+  {
+    img: printKatia,
+    alt: "Depoimento de Kátia Luciana dizendo que os moldes agilizam o trabalho",
+  },
+];
+
 const depoimentos = [
   {
-    nome: "Fernanda M.",
+    nome: "Maria A.",
+    foto: fotoMaria,
     texto:
       "Comprei achando que era pouca coisa e me surpreendi. Já fiz três bodies para minha sobrinha na primeira semana.",
   },
   {
-    nome: "Cláudia R.",
+    nome: "Joana R.",
+    foto: fotoJoana,
     texto:
       "Os moldes vêm com as medidas certinhas. Comecei vendendo roupinha de pet no meu bairro e já paguei o pack muitas vezes.",
   },
   {
-    nome: "Juliana S.",
+    nome: "Rosa S.",
+    foto: fotoRosa,
     texto:
       "Nunca tinha costurado. Segui o curso e o guia de dicas e consegui terminar um macacão sem ajuda.",
   },
