@@ -1,36 +1,33 @@
 import { createFileRoute } from "@tanstack/react-router";
-import {
-  Check,
-  Download,
-  Heart,
-  Scissors,
-  ShieldCheck,
-  Sparkles,
-  Star,
-  Zap,
-} from "lucide-react";
+import { Check, Download, Heart, Scissors, ShieldCheck, Star, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import hero from "@/assets/image-6.png.asset.json";
-import mockupFolders from "@/assets/image.png.asset.json";
+import hero from "@/assets/image.png.asset.json";
+import mockupOferta from "@/assets/image-6.png.asset.json";
 import mockupDicas from "@/assets/image-2.png.asset.json";
 import mockupCurso from "@/assets/image-3.png.asset.json";
 import mockupExtras from "@/assets/image-4.png.asset.json";
 import mockupBebe from "@/assets/image-5.png.asset.json";
+import printSueli from "@/assets/image-7.png.asset.json";
+import printSilvia from "@/assets/image-8.png.asset.json";
+import printKatia from "@/assets/image-9.png.asset.json";
+import fotoMaria from "@/assets/image-10.png.asset.json";
+import fotoJoana from "@/assets/image-11.png.asset.json";
+import fotoRosa from "@/assets/image-12.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Pack de Moldes de Costura +200 PDFs | Acesso Imediato R$19,90" },
+      { title: "+1000 Moldes de Costura em PDF | Acesso Imediato" },
       {
         name: "description",
         content:
-          "Mais de 200 moldes em PDF para bebê, pet, adulto e acessórios, com curso de costura e guia de dicas. Baixe na hora por R$19,90.",
+          "Mais de 1000 moldes em PDF para bebê, pet, adulto e acessórios, com curso de costura e guia de dicas. Baixe na hora e comece a costurar hoje.",
       },
-      { property: "og:title", content: "Pack de Moldes de Costura +200 PDFs" },
+      { property: "og:title", content: "+1000 Moldes de Costura em PDF" },
       {
         property: "og:description",
         content:
-          "Moldes prontos para imprimir, cortar e costurar. Curso, dicas e bônus inclusos por R$19,90.",
+          "Moldes prontos para imprimir, cortar e costurar. Curso de costura, dicas e bônus inclusos.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -95,19 +92,37 @@ const itens = [
   },
 ];
 
+const prints = [
+  {
+    img: printSueli,
+    alt: "Depoimento de Sueli Gerra mostrando um pijama infantil feito com os moldes",
+  },
+  {
+    img: printSilvia,
+    alt: "Depoimento de Silvia Matos elogiando a compra dos moldes",
+  },
+  {
+    img: printKatia,
+    alt: "Depoimento de Kátia Luciana dizendo que os moldes agilizam o trabalho",
+  },
+];
+
 const depoimentos = [
   {
-    nome: "Fernanda M.",
+    nome: "Maria A.",
+    foto: fotoMaria,
     texto:
       "Comprei achando que era pouca coisa e me surpreendi. Já fiz três bodies para minha sobrinha na primeira semana.",
   },
   {
-    nome: "Cláudia R.",
+    nome: "Joana R.",
+    foto: fotoJoana,
     texto:
       "Os moldes vêm com as medidas certinhas. Comecei vendendo roupinha de pet no meu bairro e já paguei o pack muitas vezes.",
   },
   {
-    nome: "Juliana S.",
+    nome: "Rosa S.",
+    foto: fotoRosa,
     texto:
       "Nunca tinha costurado. Segui o curso e o guia de dicas e consegui terminar um macacão sem ajuda.",
   },
@@ -142,45 +157,36 @@ function Index() {
           style={{ background: "var(--gradient-soft)" }}
           aria-hidden="true"
         />
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-14 md:grid-cols-2 md:py-20">
-          <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-1.5 text-sm font-bold text-secondary-foreground">
-              <Sparkles className="h-4 w-4" /> Pack digital completo
-            </span>
-            <h1 className="mt-5 text-4xl leading-[1.05] md:text-6xl">
-              +200 moldes de costura{" "}
-              <span className="text-gradient-brand">prontos para imprimir</span> e
-              costurar hoje
-            </h1>
-            <p className="mt-5 max-w-lg text-lg text-muted-foreground">
-              Moldes de bebê, pet, adulto e acessórios em PDF, com curso de costura e
-              guia de dicas inclusos. Baixe na hora, imprima em A4 e comece pela peça
-              que você mais quiser.
-            </p>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Button size="lg" variant="hero" asChild>
-                <a href={CHECKOUT_URL}>Quero meus moldes por R$19,90</a>
-              </Button>
-              <div className="text-sm text-muted-foreground">
-                <p className="font-bold text-foreground">Pagamento único</p>
-                <p>Acesso vitalício aos arquivos</p>
-              </div>
-            </div>
-            <div className="mt-6 flex items-center gap-2 text-sm text-muted-foreground">
-              <div className="flex" aria-hidden="true">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-accent text-accent" />
-                ))}
-              </div>
-              <span>+3.700 costureiras já baixaram</span>
-            </div>
-          </div>
+        <div className="mx-auto max-w-4xl px-5 py-14 text-center md:py-20">
+          <h1 className="text-4xl leading-[1.05] md:text-6xl">
+            Mais de 1000 moldes de costura{" "}
+            <span className="text-gradient-brand">prontos para imprimir</span> e
+            costurar hoje
+          </h1>
           <img
             src={hero.url}
-            alt="Moldes de costura em PDF abertos em notebook, tablet e celular ao lado de tesoura e folhas impressas"
-            className="w-full"
+            alt="Moldes de costura organizados em pastas por categoria no notebook, tablet e celular"
+            className="mx-auto mt-8 w-full max-w-3xl"
             style={{ filter: "drop-shadow(var(--shadow-lift))" }}
           />
+          <p className="mx-auto mt-8 max-w-2xl text-lg text-muted-foreground">
+            Moldes de bebê, pet, adulto e acessórios em PDF, com curso de costura e
+            guia de dicas inclusos. Baixe na hora, imprima em A4 e comece pela peça que
+            você mais quiser.
+          </p>
+          <div className="mt-8">
+            <Button size="lg" variant="hero" asChild>
+              <a href={CHECKOUT_URL}>Quero meus moldes agora</a>
+            </Button>
+          </div>
+          <div className="mt-6 flex items-center justify-center gap-2 text-sm text-muted-foreground">
+            <div className="flex" aria-hidden="true">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Star key={i} className="h-4 w-4 fill-accent text-accent" />
+              ))}
+            </div>
+            <span>+3.700 costureiras já baixaram</span>
+          </div>
         </div>
       </section>
 
@@ -248,15 +254,11 @@ function Index() {
       </section>
 
       {/* Organização */}
-      <section className="mx-auto max-w-6xl px-5 py-14">
-        <div className="grid items-center gap-10 md:grid-cols-2">
-          <img
-            src={mockupFolders.url}
-            alt="Pastas de moldes separadas por categoria masculino, feminino, infantil, pet e bônus"
-            loading="lazy"
-            className="w-full"
-            style={{ filter: "drop-shadow(var(--shadow-soft))" }}
-          />
+      <section className="mx-auto max-w-3xl px-5 py-14">
+        <div
+          className="rounded-3xl border border-border bg-card p-8"
+          style={{ boxShadow: "var(--shadow-soft)" }}
+        >
           <div>
             <h2 className="text-3xl md:text-4xl">
               Tudo separado por categoria, sem confusão
@@ -285,6 +287,12 @@ function Index() {
           className="mx-auto max-w-3xl rounded-3xl p-8 text-center text-primary-foreground md:p-12"
           style={{ background: "var(--gradient-primary)", boxShadow: "var(--shadow-lift)" }}
         >
+          <img
+            src={mockupOferta.url}
+            alt="Tudo que está incluso no pack: moldes em PDF, curso de costura e guia de dicas no notebook e tablet"
+            loading="lazy"
+            className="mx-auto mb-8 w-full max-w-xl rounded-2xl"
+          />
           <h2 className="text-3xl md:text-4xl">Leve o pack completo hoje</h2>
           <p className="mt-3 opacity-90">
             Moldes bebê + pet + curso de costura + guia de dicas. Valor separado de
@@ -310,7 +318,23 @@ function Index() {
       {/* Depoimentos */}
       <section className="mx-auto max-w-6xl px-5 py-10">
         <h2 className="text-center text-3xl md:text-4xl">Quem já está costurando</h2>
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
+        <div className="mt-10 grid items-start gap-5 md:grid-cols-3">
+          {prints.map((p) => (
+            <figure
+              key={p.alt}
+              className="overflow-hidden rounded-2xl border border-border bg-card p-3"
+              style={{ boxShadow: "var(--shadow-soft)" }}
+            >
+              <img
+                src={p.img.url}
+                alt={p.alt}
+                loading="lazy"
+                className="w-full rounded-xl"
+              />
+            </figure>
+          ))}
+        </div>
+        <div className="mt-6 grid gap-5 md:grid-cols-3">
           {depoimentos.map((d) => (
             <blockquote
               key={d.nome}
@@ -323,8 +347,14 @@ function Index() {
                 ))}
               </div>
               <p className="mt-4 text-sm text-muted-foreground">“{d.texto}”</p>
-              <footer className="mt-4 text-sm font-bold text-foreground">
-                {d.nome}
+              <footer className="mt-4 flex items-center gap-3">
+                <img
+                  src={d.foto.url}
+                  alt={`Foto de ${d.nome}`}
+                  loading="lazy"
+                  className="h-11 w-11 rounded-full object-cover"
+                />
+                <span className="text-sm font-bold text-foreground">{d.nome}</span>
               </footer>
             </blockquote>
           ))}
