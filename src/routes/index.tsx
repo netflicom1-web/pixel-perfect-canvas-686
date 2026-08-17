@@ -139,45 +139,36 @@ function Index() {
           style={{ background: "var(--gradient-soft)" }}
           aria-hidden="true"
         />
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-14 md:grid-cols-2 md:py-20">
-          <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-1.5 text-sm font-bold text-secondary-foreground">
-              <Sparkles className="h-4 w-4" /> Pack digital completo
-            </span>
-            <h1 className="mt-5 text-4xl leading-[1.05] md:text-6xl">
-              +200 moldes de costura{" "}
-              <span className="text-gradient-brand">prontos para imprimir</span> e
-              costurar hoje
-            </h1>
-            <p className="mt-5 max-w-lg text-lg text-muted-foreground">
-              Moldes de bebê, pet, adulto e acessórios em PDF, com curso de costura e
-              guia de dicas inclusos. Baixe na hora, imprima em A4 e comece pela peça
-              que você mais quiser.
-            </p>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Button size="lg" variant="hero" asChild>
-                <a href={CHECKOUT_URL}>Quero meus moldes por R$19,90</a>
-              </Button>
-              <div className="text-sm text-muted-foreground">
-                <p className="font-bold text-foreground">Pagamento único</p>
-                <p>Acesso vitalício aos arquivos</p>
-              </div>
-            </div>
-            <div className="mt-6 flex items-center gap-2 text-sm text-muted-foreground">
-              <div className="flex" aria-hidden="true">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-accent text-accent" />
-                ))}
-              </div>
-              <span>+3.700 costureiras já baixaram</span>
-            </div>
-          </div>
+        <div className="mx-auto max-w-4xl px-5 py-14 text-center md:py-20">
+          <h1 className="text-4xl leading-[1.05] md:text-6xl">
+            Mais de 1000 moldes de costura{" "}
+            <span className="text-gradient-brand">prontos para imprimir</span> e
+            costurar hoje
+          </h1>
           <img
             src={hero.url}
-            alt="Moldes de costura em PDF abertos em notebook, tablet e celular ao lado de tesoura e folhas impressas"
-            className="w-full"
+            alt="Moldes de costura organizados em pastas por categoria no notebook, tablet e celular"
+            className="mx-auto mt-8 w-full max-w-3xl"
             style={{ filter: "drop-shadow(var(--shadow-lift))" }}
           />
+          <p className="mx-auto mt-8 max-w-2xl text-lg text-muted-foreground">
+            Moldes de bebê, pet, adulto e acessórios em PDF, com curso de costura e
+            guia de dicas inclusos. Baixe na hora, imprima em A4 e comece pela peça que
+            você mais quiser.
+          </p>
+          <div className="mt-8">
+            <Button size="lg" variant="hero" asChild>
+              <a href={CHECKOUT_URL}>Quero meus moldes agora</a>
+            </Button>
+          </div>
+          <div className="mt-6 flex items-center justify-center gap-2 text-sm text-muted-foreground">
+            <div className="flex" aria-hidden="true">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Star key={i} className="h-4 w-4 fill-accent text-accent" />
+              ))}
+            </div>
+            <span>+3.700 costureiras já baixaram</span>
+          </div>
         </div>
       </section>
 
