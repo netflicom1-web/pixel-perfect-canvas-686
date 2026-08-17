@@ -1,36 +1,33 @@
 import { createFileRoute } from "@tanstack/react-router";
-import {
-  Check,
-  Download,
-  Heart,
-  Scissors,
-  ShieldCheck,
-  Sparkles,
-  Star,
-  Zap,
-} from "lucide-react";
+import { Check, Download, Heart, Scissors, ShieldCheck, Star, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import hero from "@/assets/image-6.png.asset.json";
-import mockupFolders from "@/assets/image.png.asset.json";
+import hero from "@/assets/image.png.asset.json";
+import mockupOferta from "@/assets/image-6.png.asset.json";
 import mockupDicas from "@/assets/image-2.png.asset.json";
 import mockupCurso from "@/assets/image-3.png.asset.json";
 import mockupExtras from "@/assets/image-4.png.asset.json";
 import mockupBebe from "@/assets/image-5.png.asset.json";
+import printSueli from "@/assets/image-7.png.asset.json";
+import printSilvia from "@/assets/image-8.png.asset.json";
+import printKatia from "@/assets/image-9.png.asset.json";
+import fotoMaria from "@/assets/image-10.png.asset.json";
+import fotoJoana from "@/assets/image-11.png.asset.json";
+import fotoRosa from "@/assets/image-12.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Pack de Moldes de Costura +200 PDFs | Acesso Imediato R$19,90" },
+      { title: "+1000 Moldes de Costura em PDF | Acesso Imediato" },
       {
         name: "description",
         content:
-          "Mais de 200 moldes em PDF para bebê, pet, adulto e acessórios, com curso de costura e guia de dicas. Baixe na hora por R$19,90.",
+          "Mais de 1000 moldes em PDF para bebê, pet, adulto e acessórios, com curso de costura e guia de dicas. Baixe na hora e comece a costurar hoje.",
       },
-      { property: "og:title", content: "Pack de Moldes de Costura +200 PDFs" },
+      { property: "og:title", content: "+1000 Moldes de Costura em PDF" },
       {
         property: "og:description",
         content:
-          "Moldes prontos para imprimir, cortar e costurar. Curso, dicas e bônus inclusos por R$19,90.",
+          "Moldes prontos para imprimir, cortar e costurar. Curso de costura, dicas e bônus inclusos.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
