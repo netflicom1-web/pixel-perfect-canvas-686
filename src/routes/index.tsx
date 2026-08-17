@@ -36,7 +36,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const CHECKOUT_URL = "#oferta";
+const CHECKOUT_URL = "https://pay.cakto.com.br/37hokh9_1046547";
 
 const beneficios = [
   {
