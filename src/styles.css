@@ -19,6 +19,9 @@
  */
 
 @theme inline {
+  --color-primary-glow: var(--primary-glow);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -62,26 +65,34 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --radius: 1rem;
+  --background: oklch(0.985 0.008 310);
+  --foreground: oklch(0.24 0.09 300);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
+  --card-foreground: oklch(0.24 0.09 300);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --popover-foreground: oklch(0.24 0.09 300);
+  --primary: oklch(0.46 0.21 300);
+  --primary-foreground: oklch(0.99 0.01 310);
+  --primary-glow: oklch(0.63 0.19 302);
+  --secondary: oklch(0.93 0.045 305);
+  --secondary-foreground: oklch(0.32 0.14 300);
+  --muted: oklch(0.955 0.02 305);
+  --muted-foreground: oklch(0.5 0.06 300);
+  --accent: oklch(0.85 0.16 88);
+  --accent-foreground: oklch(0.28 0.09 60);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --border: oklch(0.9 0.035 305);
+  --input: oklch(0.9 0.035 305);
+  --ring: oklch(0.63 0.19 302);
+  --gradient-primary: linear-gradient(135deg, var(--primary), var(--primary-glow));
+  --gradient-soft: linear-gradient(180deg, oklch(0.985 0.012 310), oklch(0.95 0.03 305));
+  --gradient-cta: linear-gradient(135deg, oklch(0.68 0.18 60), oklch(0.83 0.17 90));
+  --shadow-soft: 0 12px 32px -12px oklch(0.46 0.21 300 / 0.35);
+  --shadow-lift: 0 24px 60px -20px oklch(0.46 0.21 300 / 0.45);
+  --font-display: "Baloo 2", system-ui, sans-serif;
+  --font-body: "Nunito", system-ui, sans-serif;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -140,5 +151,22 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-body);
   }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: -0.01em;
+  }
+}
+
+@utility text-gradient-brand {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
