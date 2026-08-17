@@ -318,7 +318,7 @@ function Index() {
       {/* Depoimentos */}
       <section className="mx-auto max-w-6xl px-5 py-10">
         <h2 className="text-center text-3xl md:text-4xl">Quem já está costurando</h2>
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
+        <div className="mt-10 grid items-start gap-5 md:grid-cols-3">
           {prints.map((p) => (
             <figure
               key={p.alt}
